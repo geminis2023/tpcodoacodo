@@ -1,0 +1,488 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Satisfy', cursive;
+    @media screen and (min-width:768px) { /*pantalla grande*/
+        .grid-container {
+            display: grid;
+            width: 90%;
+           grid-template-areas: 'logo logo logo logo logo'
+                                'izquierda izquierda izquierda derecha derecha'
+                                'item1 item2 item3 item4 item5'
+                                'footer footer footer footer footer';
+             }
+        }
+
+@media screen and (max-width:600px) { /*celular*/
+    
+    .grid-container {    
+         width: 95%;     
+    grid-template-areas: 'logo'
+            'izquierda'
+            'derecha'
+            'item1'
+            'item2'
+            'item3'
+            'item4'
+            'item5'
+            'footer';
+        }
+}
+    @media screen and (min-width: 600px) and (max-width: 768px) { /*tablet*/
+    .grid-container{
+        width: 80%;
+    grid-template-areas: 'logo logo logo'
+                 'izquierda izquierda izquierda' 
+                 'derecha derecha derecha '
+                 'item1 item2 item3'
+                 'item4 item5 item5'
+                 'footer footer footer'
+    }
+}
+    
+}
+body{
+    font-family: 'Satisfy', cursive;
+
+    /*font-family: sans-serif;*/
+    margin:0;
+} 
+h1{
+    font-family: 'Indie Flower', cursive;
+}
+header{
+    display: flex;
+    min-height:80px;
+    background-color: #776483;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+
+}
+.containerH1{
+    
+    color: rgb(211, 202, 150);
+    margin: 20px;
+
+}
+.logo-img{
+    height:20 px;
+    margin-bottom: 20px;
+    padding: 0px;
+
+}
+nav a{
+    font-weight: 600;
+    padding-right: 10px;
+}
+nav a:hover{
+    color: white;
+}
+.aheader{
+    color:#292643;
+    font-size: 18px;
+    text-decoration: none;
+    background-color:#E99E75 ;
+    padding: 8px;
+    margin: 5px;
+    border-radius:108px;
+    display: inline-block;
+    text-align: left;
+}
+/*regla del orden: link,hover,visited,active*/
+.aheader:hover{
+    outline: 3px solid white;
+    color:aliceblue
+}
+
+.aheader:visited{
+    color:#4b12bcb4;
+}
+.aheader:active{
+    background-color:#BBAAB8;
+    color:#44426E;
+}  
+@media(max-width:700px){
+    header{
+        flex-direction: column;
+    }
+    nav{
+        padding: 10px 0px;
+    }
+}
+
+
+/*el"espacio" significa descendiente. La etiqueta footer 
+que tiene como hijo directo una etiq:nav;como nieto de la etiq.footer un "a"*/  
+#fotoFondo{
+    width: 100%;
+}
+footer{
+    margin: 0px;
+    padding: 15px;;
+    background-color: #776483;
+    text-align: center;
+    color:rgb(211, 202, 150); ;
+}
+footer a{
+    text-decoration: none;
+    padding: 1px; 
+    margin-top: 10px auto;
+}
+footer nav{
+    display: inline;
+    margin: 0 auto;
+    text-align: center;
+}
+/*-----------------------------------Reservas-----------------------------------------------------------------------------------------------------*/
+
+#formreserva{
+    background-color:#ddd;
+    width: 800px;
+    margin: 50px auto;/*lo centra*/
+    padding: 50px;
+    border-radius: 50px;
+    font-size: 22px;
+    box-shadow: 0 15px 50px;
+    
+}
+input{
+    width: 400px;
+    margin-bottom: 20px;
+    padding: 5px;
+    margin: 9px;
+    font-size: 20px;
+    border-radius: 50px;
+}
+input[type="submit"]:hover {
+    background-color: #005F6B;
+  }
+
+/*------------------------------------formDeCotizacion-----------------------------------*/
+.formcot-container{
+    
+    
+    flex-direction: column;
+    box-shadow: 0 0 10px #727272;
+    font-size: 18px;
+    border-radius: 5px;
+    width: 900px;
+    margin: 50px auto;/*lo centra*/
+    cursor: pointer;
+    background-color: #ddd;
+    padding: 82px;
+}    
+    
+    
+input{
+    width: 700px;
+    padding: 6px;
+    margin: 30px;
+    font-size: 18px;
+    border-radius: 3px;
+    object-fit: cover;
+
+}
+    
+
+button{
+    width: 700px;
+    margin-bottom: 20px;
+    padding: 5px;
+    margin: 19px;
+    font-size: 20px;
+    border-radius: 50px;
+}
+
+button:hover {
+    
+    background-color: #005F6B;
+  }
+
+
+
+
+
+
+/*-----------------------------------------carousel--------------------------------------*/
+#demo {
+    height: 90%;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    overflow: hidden;
+    box-shadow: 0 15px 50px;
+    position: relative;
+    margin-top: 1%;
+    object-fit: cover;
+
+}
+/*------------------------------------------Gallery--------------------------------------*/
+.gallery-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 150px;
+    padding: 20px;
+    grid-gap:10px;/*espacio entre columnas*/
+}   
+.gallery_img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;/*la imagen ocupa el ancho sin distorsionarse*/
+}
+/*----------------------------------------Registro----------------------------------------*/
+              
+ .container mt-3 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 200%;
+    
+  }
+  button[type="submit"] {
+    background-color: #a8a6b5;
+    color: white;
+    font-size: 18px;
+    padding: 10px ;
+    border: none;
+    border-radius: 5px;
+    margin-left: 3px;
+    cursor: pointer;
+    width: 100%;
+    
+    
+    transform: translate(-50%,-50);
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #005F6B;
+  }
+
+
+
+/*---------------------------------------Sucursal---------------------------------------*/
+.container_sucursal {
+    
+    height: 90%;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+    margin-top: 1%;
+    object-fit: cover;
+    font-size: 22px;
+}
+.container_sucursal a{
+    text-decoration: none;
+    font-size: 22px;
+    text-align: center;
+    
+}
+/*-----------------------------------------Nosotros--------------------------------------*/
+.nosotros{
+    width:300px ;
+    border:1px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #727272;
+    margin: 15px;
+
+
+} 
+.nosotros img{
+    width: 100%;
+}
+.textocard{
+    padding: 10px;
+}
+.nosotros a{
+    color:#292643;
+    font-size: 20px;
+    text-decoration: none;
+    background-color:#E99E75 ;
+    padding: 8px;
+    margin: 5px;
+    border-radius:108px;
+    display: inline-block;
+}
+.contenedor-nos {
+    display: flex;
+    padding: 100px;
+    margin: 100px;
+
+}
+
+.nosotros {
+    
+
+    flex-flow: row wrap;
+    justify-content: center;
+}
+/*--------------------------nosotrosGrilla----------------------*/
+
+  
+/*-------divImagenesGriddIndex-----------------------------------------------*/
+.box{
+    background-color: slateblue;
+    padding: 2px;
+    width: 100px;
+    color: white;
+    text-align: center;
+}
+
+.contenedor{
+    display: grid;
+    grid-template-columns: 25px 25px 25px ; /*Cantidad y ancho de columnas*/
+    grid-template-rows: repeat(2, 100px); /*Cantidad y ancho de filas*/
+    gap:30px  10px ; /*A nivel de filas y columnas*/
+}
+/*-------------------------------------Habitaciones--------------------------------------*/
+.habitacion{
+    width:300px ;
+    border:1px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #727272;
+    margin: 15px;
+} 
+.habitacion img{
+    width: 100%;
+}
+.textocard{
+    padding: 10px;
+}
+.habitacion a{
+    color:#292643;
+    font-size: 20px;
+    text-decoration: none;
+    background-color:#E99E75 ;
+    padding: 8px;
+    margin: 5px;
+    border-radius:108px;
+    display: inline-block;
+}
+.contenedor-hab {
+    display: flex;
+    padding: 100px;
+    margin: 100px;
+
+}
+
+.habitacion{
+    
+
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+/*------------------css grid -------------------*/
+/*.header {
+    grid-area: header;
+    color: white;
+    
+    text-align: center;
+    font-size: 35px;
+    width: 400px;
+    height: 60px;
+    padding-top: 20px
+   }*/
+   .grilla{
+    height: 60px;
+    grid-area: footer;
+    background-color: black;
+    color: white;
+    margin:0 auto;
+}
+
+.grid-container{
+    
+    display:grid;
+    width: 100%;
+    margin: 0 auto;
+}    
+@media screen and (min-width:768px) { /*pantalla grande*/
+    .grid-container {
+        display: grid;
+        width: 90%;
+       grid-template-areas: 'logo logo logo logo logo'
+                            'izquierda izquierda izquierda derecha derecha'
+                            'item1 item2 item3 item4 item5'
+                            'footer footer footer footer footer';
+         }
+    }
+   
+
+.izquierda{
+    grid-area:izquierda;
+    background-color: rgb(232, 232, 240);
+   
+}
+.derecha{
+    grid-area: derecha;
+    background-color: #727272;
+    
+}
+.item1{
+    grid-area: item1;
+    background-color: brown;
+    height:  100px;
+}   
+.item2{
+    grid-area: item2;
+    background-color: chartreuse;
+    height: 100px;
+}
+.item3{
+    grid-area: item3;
+    background-color: aquamarine;
+    height: 100px;
+}
+.item4{
+    grid-area: item4;
+    background-color: blueviolet;
+    height: 100px;
+}
+.item5{
+    grid-area: item5;
+    background-color: palevioletred;
+    height: 100px;
+}
+.footer{
+    height: 60px;
+    grid-area: footer;
+    background-color: black;
+    color: white;
+}
+@media screen and (max-width:600px) { /*celular*/
+    
+    .grid-container {    
+         width: 95%;     
+    grid-template-areas: 'logo'
+            'izquierda'
+            'derecha'
+            'item1'
+            'item2'
+            'item3'
+            'item4'
+            'item5'
+            'footer';
+        }
+}
+    @media screen and (min-width: 600px) and (max-width: 768px) { /*tablet*/
+    .grid-container{
+        width: 80%;
+    grid-template-areas: 'logo logo logo'
+                 'izquierda izquierda izquierda' 
+                 'derecha derecha derecha '
+                 'item1 item2 item3'
+                 'item4 item5 item5'
+                 'footer footer footer'
+    }
+}
+    
+/*si se usa una sola condicion para las medias queries importa el orden en que se ponen; si tiene min-max, no*/
+
